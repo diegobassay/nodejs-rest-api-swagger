@@ -1,0 +1,216 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Catalogo de serviços usando a entidade Contato",
+        "version": "0.0.1",
+        "title": "Contatos API"
+    },
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/contatosapi": {
+            "get": {
+                "tags": [
+                    "contatos"
+                ],
+                "summary": "Obter todos os contatos",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contato"
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "contatos"
+                ],
+                "summary": "Criar um contato",
+                "description": "",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Contato",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ContatoCreate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Criado",
+                        "schema": {
+                            "$ref": "#/definitions/ContatoCreate"
+                        }
+                    },
+                    "400": {
+                        "description": "Erro Interno"
+                    },
+                    "401": {
+                        "description": "Conflito"
+                    }
+                }
+            }
+        },
+        "/contatosapi/{idContato}": {
+            "get": {
+                "tags": [
+                    "contatos"
+                ],
+                "summary": "Obter um contato por id",
+                "description": "",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "idContato",
+                        "description": "ID de um contato para consulta",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Contato"
+                        }
+                    },
+                    "404": {
+                        "description": "Não encontrado"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "contatos"
+                ],
+                "summary": "Atualizar contato",
+                "description": "",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Contato a ser atualizado",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ContatoUpdate"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "409": {
+                        "description": "Conflito"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "contatos"
+                ],
+                "summary": "Apaga um objeto do tipo contato",
+                "description": "",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "idContato",
+                        "description": "ID de um contato para consulta",
+                        "required": true,
+                        "type": "integer"
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Contato"
+                        }
+                    },
+                    "401": {
+                        "description": "Não encontrado"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Contato": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "canal": {
+                    "type": "string"
+                },
+                "valor": {
+                    "type": "string"
+                },				
+                "obs": {
+                    "type": "string"
+                }
+            }
+        },
+        "ContatoCreate": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "canal": {
+                    "type": "string"
+                },
+                "valor": {
+                    "type": "string"
+                },				
+                "obs": {
+                    "type": "string"
+                }
+            }
+        },
+        "ContatoUpdate": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "nome": {
+                    "type": "string"
+                },
+                "canal": {
+                    "type": "string"
+                },
+                "valor": {
+                    "type": "string"
+                },				
+                "obs": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

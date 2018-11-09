@@ -1,0 +1,39 @@
+{
+  "contatos": [
+    {
+      "id": 1,
+      "nome": "Diego Costa",
+      "canal": "email",
+      "valor": "diegobassay@gmail.com",
+      "obs": "Email do Diego"
+    },
+    {
+      "id": 2,
+      "nome": "Luke Skywalker",
+      "canal": "telefone",
+      "valor": "990907654",
+      "obs": "Telefone do Luke"
+    },
+    {
+      "id": 3,
+      "nome": "Darth Vader",
+      "canal": "fixo",
+      "valor": "34345678",
+      "obs": "Telefone da Casa do Vader"
+    },
+    {
+      "id": 4,
+      "nome": "Han Solo",
+      "canal": "email",
+      "valor": "harisonford@yahoo.com",
+      "obs": "Email do Han Solo"
+    },
+    {
+      "id": 5,
+      "nome": "Mestre Yoda",
+      "canal": "email",
+      "valor": "yoda@jedi.com",
+      "obs": "Email do Mestre Yoda"
+    }
+  ]
+}

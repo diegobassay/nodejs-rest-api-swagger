@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-rest-api-swagger",
+  "version": "1.0.0",
+  "description": " API para um serviço de gestão de contatos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "_mocha -u bdd --colors test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegobassay/nodejs-rest-api-swagger.git"
+  },
+  "author": "diegobassay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diegobassay/nodejs-rest-api-swagger/issues"
+  },
+  "homepage": "https://github.com/diegobassay/nodejs-rest-api-swagger#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.3",
+    "lowdb": "^1.0.0",
+    "mocha": "^5.2.0",
+    "mocha-steps": "^1.1.0",
+    "schm": "^0.4.0",
+    "static-favicon": "^2.0.0-alpha",
+    "supertest": "^3.1.0",
+    "swagger-ui-express": "^3.0.10"
+  }
+}
